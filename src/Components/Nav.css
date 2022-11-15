@@ -1,0 +1,22 @@
+header {
+    align-items: center;
+    background: var(--primary);
+    display: flex;
+    padding: 25px 15% 35px;
+    background-color: rgb(226, 134, 134);
+  }
+  
+  header article,
+  header nav {
+    width: 50%;
+  }
+  
+  header h1 {
+    height: auto;
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  header h1 {
+    font-weight: 300;
+  }

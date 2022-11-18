@@ -1,33 +1,47 @@
 import { useState } from "react";
 import { fetchVideos } from "../api/fetch";
 
-// function filterSearch(search, snowboard) {
-//   return snowboard.filter((item) => item.snippet.title.toLowerCase().match(search.toLowerCase()))
-// }
+const Search = ({ setVideos, videos }) => {
+  const [searchBar, setSearchBar] = useState("");
 
-const Search = ({setVideos}) => {
-  const [searchBar, setSearchBar] = useState("")
-
-  const handleTextChange = ((e) => {
+  
+  const handleTextChange = (e) => {
+    e.preventDefault()
     const title = e.target.value;
-    setSearchBar(title);
-  });
+      setSearchBar(title);
+  };
+  // const handleClick = () => {
+  //   searchBar('') 
+  // }
+  // const clearSearchBar =(()=> {
+  //  fetchVideos(searchBar, setVideos);
+  //  handleClick()
+   
+  // })
+  
+  return (
+    <div className="searchbar">
+      <label htmlFor="searchTitle">
+        Search Videos:
+        <input
+          type="text"
+          value={searchBar}
+          id="searchBar"
+          onChange={handleTextChange}
+        />
+      </label>
+     
+      <button
+        className="search-button"
+        onClick={() => fetchVideos(searchBar, setVideos)}
 
-  return(
-    <div>
-       <label htmlFor="searchTitle">
-            Search Videos:
-            <input
-              type="text"
-              value={searchBar}
-              id="searchBar"
-              onChange={handleTextChange}
-            />
-        </label>
-        <button onClick={() => fetchVideos(searchBar, setVideos)}>Search</button>
-        
+      >
+        Search
+      </button>
+    
+      
     </div>
-  ) 
+  );
 };
 
 export default Search;

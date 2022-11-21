@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { fetchVideos } from "../api/fetch";
 import Search from "./Search";
 import Thumbnail from "./Thumbnail";
-import Form from "./Form"
 import "./Nav.css";
 import "../App.css";
 
@@ -25,7 +24,6 @@ const Home = ({ videos, setVideos }) => {
         ))}
         <div>
           <Search setVideos={setVideos} />
-          <Form />
         </div>
         {videos.length === 0 ? (
           <div className="search-message">

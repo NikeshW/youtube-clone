@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import Form from "./Form";
 
@@ -6,6 +6,8 @@ const Video = ({ videos }) => {
   let [searchParams, setSearchParams] = useSearchParams();
 
   const id = searchParams.get("id");
+
+  const [commentList,setCommentList] = useState([])
 
   return (
     <div>
@@ -21,7 +23,7 @@ const Video = ({ videos }) => {
       ></iframe>
       </div>
       <div>
-        <Form/>
+        <Form commentList={commentList} setCommentList={setCommentList}/>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 const URL = process.env.REACT_APP_BASE_URL;
 const KEY = process.env.REACT_APP_YT_KEY;
 
-const fetchVideos = (query, setVideos) => {
+const fetchVideos = (query, setVideos, setSearchBar) => {
   if (query.length === 0) {
     return null;
   } else {
@@ -11,8 +11,10 @@ const fetchVideos = (query, setVideos) => {
       .then((res) => res.json())
       .then((data) => {
         setVideos(data.items);
+        setSearchBar("")
         
       });
   }
+  
 };
 export { fetchVideos };

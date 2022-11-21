@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 
-
-const Form = () => {
+const Form = ({commentList, setCommentList}) => {
   const [user, setUser] = useState({
     name: "",
     comment: "",
   });
 
-  const [usercomment, setUserComment] = useState({});
+ 
 
-  const [commentList, setCommentList ]= useState([])
-
-
-
-
+  console.log(commentList);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserComment({ name: user.name, comment: user.comment });
-    setCommentList(usercomment)
+
+    setCommentList([
+      ...commentList,
+      { name: user.name, comment: user.comment },
+    ]);
   };
 
   return (
@@ -37,6 +35,7 @@ const Form = () => {
             }}
             id="name"
           />
+          <br />
         </label>
         <label htmlFor="comment">
           Comment
@@ -52,17 +51,15 @@ const Form = () => {
             id="comment"
           />
         </label>
-        {/* <p>
-        {user.name}{' '}
-        {user.comment}{' '}
-        
-      </p> */}
+      
         <ul>
-          <li>
-            <h4>{usercomment.name} </h4>
+          {commentList.map((comment, i) => (
+            <li key={i}>
+              <h4>{comment.name} </h4>
 
-            <p> {usercomment.comment} </p>
-          </li>
+              <p> {comment.comment} </p>
+            </li>
+          ))}
         </ul>
 
         <button>Submit</button>

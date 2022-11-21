@@ -3,7 +3,7 @@ header {
     background: var(--primary);
     display: flex;
     padding: 25px 15% 35px;
-    background-color: rgb(226, 134, 134);
+    background-color: rgb(142, 212, 240);
   }
   
   header article,
@@ -12,14 +12,13 @@ header {
   }
   
   header h1 {
-    height: auto;
     margin: 0;
-    font-size: 36px;
+    font-size: 46px;
   }
   
-  header h1 {
+  /* header h1 {
     font-weight: 300;
-  }
+  } */
 
   .search-message img{
     height: 400px;

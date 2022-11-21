@@ -33,7 +33,7 @@ const Search = ({ setVideos, videos }) => {
      
       <button
         className="search-button"
-        onClick={() => fetchVideos(searchBar, setVideos)}
+        onClick={() => fetchVideos(searchBar, setVideos, setSearchBar)}
 
       >
         Search

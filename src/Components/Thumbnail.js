@@ -7,12 +7,12 @@ const Thumbnail = ({ videos }) => {
       {videos.map((video, id) => {
         return (
           <div key={id}>
-            <img
+             <Link to={`/video?id=${video.id.videoId}`}> 
+             <img
               className="snowimg"
               src={video.snippet.thumbnails.medium.url}
               alt={video.name}
             />
-            <Link to={`/video?id=${video.id.videoId}`}>
             <h4>{video.snippet.title}</h4>
             </Link>
           </div>

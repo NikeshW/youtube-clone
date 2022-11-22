@@ -5,22 +5,22 @@ import Thumbnail from "./Thumbnail";
 import "./Nav.css";
 import "../App.css";
 
-const Home = ({ videos, setVideos }) => {
+const Home = ({ videos, setVideos,setSearchBar }) => {
   const pillLinks = [
-    "music",
+    "Reactjs",
+    "Programing",
+    "Hindi music",
     "games",
-    "DIY",
-    "programing",
-    "reactjs",
-    "babies",
-    "cats",
+    "Js",
+    "Documentaries",
+    "Calesthenics",
   ];
 
   return (
     <div className="home-div">
       <div className="content">
-        {pillLinks.map((pill) => (
-          <button onClick={() => fetchVideos(pill, setVideos)}>{pill}</button>
+        {pillLinks.map((pill,i) => (
+          <button key={i} onClick={() => fetchVideos(pill, setVideos, setSearchBar)}>{pill}</button>
         ))}
         <div>
           <Search setVideos={setVideos} />

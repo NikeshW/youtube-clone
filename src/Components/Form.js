@@ -6,9 +6,7 @@ const Form = ({commentList, setCommentList}) => {
     comment: "",
   });
 
- 
-
-  console.log(commentList);
+  // console.log(commentList);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,7 +50,7 @@ const Form = ({commentList, setCommentList}) => {
           />
         </label>
       
-        <ul>
+        <ul style={{listStyle: "none"}}>
           {commentList.map((comment, i) => (
             <li key={i}>
               <h4>{comment.name} </h4>

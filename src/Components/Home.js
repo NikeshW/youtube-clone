@@ -5,7 +5,7 @@ import Thumbnail from "./Thumbnail";
 import "./Nav.css";
 import "../App.css";
 
-const Home = ({ videos, setVideos,setSearchBar }) => {
+const Home = ({ videos, setVideos, searchBar, setSearchBar, openModal,setOpenModal }) => {
   const pillLinks = [
     "Reactjs",
     "Programing",
@@ -14,16 +14,18 @@ const Home = ({ videos, setVideos,setSearchBar }) => {
     "Js",
     "Documentaries",
     "Calesthenics",
+    "Lo-fi",
+    "The Hot 100"
   ];
 
   return (
     <div className="home-div">
       <div className="content">
         {pillLinks.map((pill,i) => (
-          <button key={i} onClick={() => fetchVideos(pill, setVideos, setSearchBar)}>{pill}</button>
+          <button key={i} onClick={() => fetchVideos(pill, setVideos, setSearchBar,setOpenModal)}>{pill}</button>
         ))}
         <div>
-          <Search setVideos={setVideos} />
+          <Search setVideos={setVideos} setSearchBar={setSearchBar} searchBar={searchBar} openModal={openModal} setOpenModal={setOpenModal}/>
         </div>
         {videos.length === 0 ? (
           <div className="search-message">

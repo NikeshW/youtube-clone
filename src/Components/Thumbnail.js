@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Thumbnail.css"
 
 const Thumbnail = ({ videos }) => {
   return (
-    <div>
+    <div className="thumbnails">
       {videos.map((video, id) => {
         return (
           <div key={id}>

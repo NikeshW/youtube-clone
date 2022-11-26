@@ -1,4 +1,18 @@
 .aboutpage{
-    min-height: 100vh;
+    min-height: 100vh; 
+    display: block;
+    justify-content: space-evenly;
    
+}
+
+.feeling{
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+
+}
+
+.us{
+    display: flex;
+    justify-content: center;
 }

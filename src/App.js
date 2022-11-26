@@ -23,8 +23,8 @@ function App() {
           <Route path="/" element={<Home videos={videos} setVideos={setVideos} searchBar={searchBar}setSearchBar={setSearchBar} openModal={openModal} setOpenModal={setOpenModal}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/video" element={<Video videos={videos}/>} />
+          {/* <Route path="/" element={<Home />}/> */}
         </Routes>
-        {/* <Modal/> */}
         <Footer />
         
       </Router>

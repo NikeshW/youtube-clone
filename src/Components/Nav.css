@@ -1,9 +1,9 @@
 header {
-    align-items: center;
-    background: var(--primary);
+    /* align-items: center; */
+    /* background: var(--primary); */
     display: flex;
-    padding: 25px 15% 35px;
-    background-color: rgb(142, 212, 240);
+    padding: 15px 5px;
+    background-color: rgb(214, 164, 128);
   }
   
   header article,
@@ -13,13 +13,13 @@ header {
   
   header h1 {
     margin: 0;
-    font-size: 46px;
+    font-size: 50px;
   }
   
   /* header h1 {
     font-weight: 300;
   } */
 
-  .search-message img{
+  /* .search-message img{
     height: 400px;
-  }
+  } */

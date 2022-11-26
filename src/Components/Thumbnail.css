@@ -1,0 +1,4 @@
+.thumbnails{
+    display: grid;
+    /* width: 100%; */
+    grid-template-columns: 3fr 3fr;}

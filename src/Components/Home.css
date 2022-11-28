@@ -1,24 +1,90 @@
 .home-div {
-    min-height: 100vh;
-    background-color: rgb(0, 0, 0);
-    background-image: url("");
-   
+  min-height: 100vh;
+  /* background-color: rgb(0, 0, 0); */
+  /* background-image: url("https://im4.ezgif.com/tmp/ezgif-4-f6b0a6ed93.gif"); */
+
 }
- 
+
+/* .content {
+  color: aliceblue;
+} */
+
 div .pill-content {
-    display: inline-block;
-    justify-content:center;
-    padding: 45px 10px 10px 20px;
+  display: inline-block;
+  justify-content: center;
+  font-size: medium;
+  padding: 45px 10px 10px 20px;
 }
 
-.search-message img{
-    height: 400px;
+.search-message img {
+  height: 400px;
+}
+
+button.pillbtn {
+  width: 100px;
+  height: 30px;
+}
+
+div .search-message {
+  color: rgb(245, 247, 248);
+  align-items: center;
+font-size: larger;
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+ ul{
+  list-style: none;
+  display: inline-block;
+  align-items: center;
+width: 100px;
 } 
-
 button.pillbtn{
-    padding: 5px;
+  width:120px ;
+
+}
+.pillbtn{
+
+  appearance: none;
+  background-color: #FFFFFF;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #afc1da 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 100;
+  /* letter-spacing: -.14px; */
+  margin: 0;
+  outline: none;
+  /* padding: 1rem 1.3rem; */
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.search-message{
-    color: rgb(33, 133, 221);
+.pillbtn:hover {
+  background-color: #fd8b53;
+  box-shadow: #91421a 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.pillbtn:active {
+  transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+ .pillbtn{
+    font-size: 1.0rem;
+    /* padding: .75rem 2rem; */
+  }
 }

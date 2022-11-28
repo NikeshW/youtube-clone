@@ -5,6 +5,8 @@ import Thumbnail from "./Thumbnail";
 // import "./Nav.css";
 // import "../App.css";
 import "./Home.css";
+import BGvideo from "./BGvideo";
+// import cityscape from "../Videobg/cityscape.mp4"
 
 const Home = ({
   videos,
@@ -30,9 +32,16 @@ const Home = ({
 
   return (
     <div className="home-div">
+      <BGvideo/>
+        {/* <video src={cityscape} autoPlay loop muted/>
+        <div className="content">
+          <h1>welcome home</h1>
+        </div> */}
       <div className="pill-content">
         {pillLinks.map((pill, i) => (
-          <button className="pillbtn"
+         <ul>
+          <li>
+            <button className="pillbtn"
             key={i}
             onClick={() =>
               fetchVideos(pill, setVideos, setSearchBar, setOpenModal)
@@ -40,9 +49,24 @@ const Home = ({
           >
             {pill}
           </button>
+          </li>
+         </ul>
+         
         ))}
       </div>
-      <div>
+      {/* <div>
+        <Search
+          setVideos={setVideos}
+          setSearchBar={setSearchBar}
+          searchBar={searchBar}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />
+      </div> */}
+      {videos.length === 0 ? (
+        <div className="search-message">
+          <h1>Videos For Your Entertainment, One Click Away!</h1>
+          <div>
         <Search
           setVideos={setVideos}
           setSearchBar={setSearchBar}
@@ -51,18 +75,8 @@ const Home = ({
           setOpenModal={setOpenModal}
         />
       </div>
-      {videos.length === 0 ? (
-        <div className="search-message">
-          <h1>Videos For Your Entertainment, One Click Away!</h1>
           <h3>No search results yet! Please submit a search</h3>
-          <img
-            // src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cat_Laptop_-_Idil_Keysan_-_Wikimedia_Giphy_stickers_2019.gif/768px-Cat_Laptop_-_Idil_Keysan_-_Wikimedia_Giphy_stickers_2019.gif"
-            src="https://i.gifer.com/7VA.gif"
-            alt="searchimg"
-          />
-        </div>
-
-        
+        </div>     
       ) : (
         <Thumbnail videos={videos} />
       )}

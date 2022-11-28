@@ -2,7 +2,7 @@
     min-height: 100vh; 
     display: block;
     justify-content: space-evenly;
-   
+    /* background-image: url("https://i.gifer.com/3HeZ.gif"); */
 }
 
 .feeling{
@@ -15,4 +15,8 @@
 .us{
     display: flex;
     justify-content: center;
+}
+
+h4{
+    color: black;
 }

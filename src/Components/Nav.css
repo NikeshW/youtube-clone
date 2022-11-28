@@ -3,7 +3,9 @@ header {
     /* background: var(--primary); */
     display: flex;
     padding: 15px 5px;
-    background-color: rgb(214, 164, 128);
+    background-color: #fcc69f;
+    /* background: transparent; */
+    /* opacity: .6; */
   }
   
   header article,
@@ -12,14 +14,28 @@ header {
   }
   
   header h1 {
-    margin: 0;
+ float: left;  
+ padding-left: 20px;
+  margin: 0;
     font-size: 50px;
+    color: rgb(253, 253, 253);
   }
-  
-  /* header h1 {
-    font-weight: 300;
-  } */
+ 
+.home-nav{
+  display: block;
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  /* .search-message img{
-    height: 400px;
-  } */
+.about-nav{
+  display: block;
+  float: right;
+  padding-right: 20px;
+
+}
+
+h4{
+  color: rgb(252, 252, 252);
+  font-size: 20px;
+}

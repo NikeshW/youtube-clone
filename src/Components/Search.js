@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { fetchVideos } from "../api/fetch";
 import Modal from "./Modal";
+import "./Search.css"
+import {GoSearch} from 'react-icons/go'
 
 const Search = ({ setVideos, videos,searchBar,setSearchBar,openModal,setOpenModal }) => {
  
@@ -11,18 +12,27 @@ const Search = ({ setVideos, videos,searchBar,setSearchBar,openModal,setOpenModa
     const title = e.target.value;
     setSearchBar(title);
   };
+  
+  const handleKeypress = e => {
+  if (e.key === 'Enter') {
+    fetchVideos(searchBar, setVideos, setSearchBar,setOpenModal)
+  }
+};
 
 return (
     <>
       {openModal && <Modal closeModal={setOpenModal} />}
       <div className="searchbar">
         <label htmlFor="searchTitle">
-          Search Videos:
-          <input
+
+          {/* Search Videos: */}
+          <input className="search_input"
+          placeholder="Search.."
             type="text"
             value={searchBar}
             id="searchBar"
             onChange={handleTextChange}
+            onKeyDown={handleKeypress}
           />
         </label>
 
@@ -30,7 +40,7 @@ return (
           className="search-button"
           onClick={() => fetchVideos(searchBar, setVideos, setSearchBar,setOpenModal)}
         >
-          Search
+          <GoSearch style={{height:'30', width:'30'}} />
         </button>
       </div>
     </>

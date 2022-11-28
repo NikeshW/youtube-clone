@@ -13,17 +13,15 @@ function App() {
   const [searchBar, setSearchBar] = useState("");
   const [openModal, setOpenModal] = useState(false);
 
-
   return (
     <div className="App">
       <Router>
-        <Nav />
+        <Nav setVideos={setVideos}/>
         
         <Routes>
           <Route path="/" element={<Home videos={videos} setVideos={setVideos} searchBar={searchBar}setSearchBar={setSearchBar} openModal={openModal} setOpenModal={setOpenModal}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/video" element={<Video videos={videos}/>} />
-          {/* <Route path="/" element={<Home />}/> */}
         </Routes>
         <Footer />
         

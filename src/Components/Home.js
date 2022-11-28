@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { fetchVideos } from "../api/fetch";
 import Search from "./Search";
 import Thumbnail from "./Thumbnail";
-// import "./Nav.css";
-// import "../App.css";
-import "./Home.css";
 import BGvideo from "./BGvideo";
-// import cityscape from "../Videobg/cityscape.mp4"
+import "./Home.css";
+
 
 const Home = ({
   videos,
@@ -33,13 +31,10 @@ const Home = ({
   return (
     <div className="home-div">
       <BGvideo/>
-        {/* <video src={cityscape} autoPlay loop muted/>
-        <div className="content">
-          <h1>welcome home</h1>
-        </div> */}
+     
       <div className="pill-content">
         {pillLinks.map((pill, i) => (
-         <ul>
+         <ul key={i}>
           <li>
             <button className="pillbtn"
             key={i}
@@ -54,15 +49,7 @@ const Home = ({
          
         ))}
       </div>
-      {/* <div>
-        <Search
-          setVideos={setVideos}
-          setSearchBar={setSearchBar}
-          searchBar={searchBar}
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-        />
-      </div> */}
+    
       {videos.length === 0 ? (
         <div className="search-message">
           <h1>Videos For Your Entertainment, One Click Away!</h1>

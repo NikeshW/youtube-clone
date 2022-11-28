@@ -6,7 +6,7 @@ import Nav from "./Components/Nav";
 import "./App.css";
 import Video from "./Components/Video";
 import Footer from "./Components/Footer";
-import Modal from "./Components/Modal";
+
 
 function App() {
   const [videos, setVideos] = useState([])

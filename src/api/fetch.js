@@ -9,7 +9,7 @@ const fetchVideos = (query, setVideos,setSearchBar,setOpenModal) => {
     
   } else {
     return fetch(
-      `${URL}/search?part=snippet&maxResults=25&q=${query}&key=${KEY}`
+      `${URL}/search?part=snippet&maxResults=24&q=${query}&key=${KEY}`
     )
       .then((res) => res.json())
       .then((data) => {

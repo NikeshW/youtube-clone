@@ -7,15 +7,15 @@ const Thumbnail = ({ videos }) => {
     <div className="thumbnails">
       {videos.map((video, id) => {
         return (
-          <div key={id}>
+          <div classname='thumnailvids' key={id}>
              <Link to={`/video?id=${video.id.videoId}`}> 
-             <img
-              className="snowimg"
-              src={video.snippet.thumbnails.medium.url}
+             <img 
+              className="showimg"
+              src={video.snippet.thumbnails.high.url}
               alt={video.name}
             />
-            <h4>{video.snippet.title}</h4>
             </Link>
+            <h4 className="thumbh4">{video.snippet.title}</h4>
           </div>
         );
       })}

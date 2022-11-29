@@ -25,7 +25,6 @@ return (
       <div className="searchbar">
         <label htmlFor="searchTitle">
 
-          {/* Search Videos: */}
           <input className="search_input"
           placeholder="Search.."
             type="text"

@@ -1,19 +1,15 @@
 .home-div {
   min-height: 100vh;
-  /* background-color: rgb(0, 0, 0); */
-  /* background-image: url("https://im4.ezgif.com/tmp/ezgif-4-f6b0a6ed93.gif"); */
-
+ 
 }
 
-/* .content {
-  color: aliceblue;
-} */
 
 div .pill-content {
   display: inline-block;
   justify-content: center;
   font-size: medium;
   padding: 45px 10px 10px 20px;
+  margin-top: 60px;
 }
 
 .search-message img {
@@ -21,12 +17,13 @@ div .pill-content {
 }
 
 button.pillbtn {
-  width: 100px;
-  height: 30px;
+  width: 80px;
+  height: 25px;
+  text-shadow: 1px 1px #754126;
 }
 
 div .search-message {
-  color: rgb(245, 247, 248);
+  color: rgb(253, 100, 44);
   align-items: center;
 font-size: larger;
 font-family: Georgia, 'Times New Roman', Times, serif;
@@ -73,8 +70,8 @@ button.pillbtn{
 }
 
 .pillbtn:hover {
-  background-color: #fd8b53;
-  box-shadow: #91421a 0 -6px 8px inset;
+  background-color: #fa6d27;
+  box-shadow: #712c09 0 -6px 8px inset;
   transform: scale(1.125);
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Form.css"
 
 const Form = ({commentList, setCommentList}) => {
   const [user, setUser] = useState({
@@ -15,10 +16,12 @@ const Form = ({commentList, setCommentList}) => {
       ...commentList,
       { name: user.name, comment: user.comment },
     ]);
+    setUser({name: "", comment: ""})
   };
 
   return (
-    <div>
+    <div className="form">
+      <div className="form-content">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           Name
@@ -48,20 +51,22 @@ const Form = ({commentList, setCommentList}) => {
             }}
             id="comment"
           />
-        </label>
-      
-        <ul style={{listStyle: "none"}}>
+        </label><br/>
+
+        <button>Submit</button>
+      </form>
+      <ul className="ul-listyle" style={{listStyle: "none"}}>
           {commentList.map((comment, i) => (
             <li key={i}>
-              <h4>{comment.name} </h4>
+              <h4 className="formh4">{comment.name} </h4>
 
               <p> {comment.comment} </p>
             </li>
           ))}
         </ul>
-
-        <button>Submit</button>
-      </form>
+      </div>
+      
+      
     </div>
   );
 };

@@ -4,6 +4,8 @@ import Search from "./Search";
 import Thumbnail from "./Thumbnail";
 import BGvideo from "./BGvideo";
 import "./Home.css";
+import cityscape from "../Videobg/cityscape.mp4"
+
 
 
 const Home = ({
@@ -30,7 +32,7 @@ const Home = ({
 
   return (
     <div className="home-div">
-      <BGvideo/>
+      <BGvideo source={cityscape}/>
      
       <div className="pill-content">
         {pillLinks.map((pill, i) => (

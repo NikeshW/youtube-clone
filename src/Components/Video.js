@@ -17,11 +17,11 @@ const Video = () => {
   return (
     <div className="video">
       
-      <div>
+      <div className="videoimg">
       
         <iframe
-          width="560"
-          height="315"
+          width="616"
+          height="346.5"
           src={`https://www.youtube.com/embed/${id}`}
           title="YouTube video player"
           frameBorder="0"

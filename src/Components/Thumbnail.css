@@ -2,3 +2,12 @@
     display: grid;
     /* width: 100%; */
     grid-template-columns: 3fr 3fr;}
+
+.showimg{
+    box-shadow: rgba(255, 134, 69, 0.931) 3px 3px 8px;} 
+
+.thumbh4{
+     color: rgb(246, 121, 49);
+     text-shadow:3px 3px rgb(0, 0, 0);
+     padding: 15px;
+font-size: 17px;}

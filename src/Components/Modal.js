@@ -12,14 +12,15 @@ function Modal({ closeModal }) {
           <img
             src="https://media2.giphy.com/media/Ll22OhMLAlVDb8UQWe/giphy.gif"
             alt="error"
-            width={200}
+            // height={150}
+            // width={200}
           />
         </div>
         <div className="body">
           <p>Must enter an input in search bar</p>
         </div>
         <div className="footer">
-          <button onClick={() => closeModal(false)}>Cancel</button>
+          <button className="cancelbtn" onClick={() => closeModal(false)}>Cancel</button>
         </div>
       </div>
     </div>

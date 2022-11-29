@@ -1,4 +1,14 @@
-/* .video {
-    background-image: url("");
+iframe{
+    /* background-image: url(""); */
+    margin: 20px;
+    box-shadow: rgb(243, 151, 23) 0px 14px 28px, rgba(239, 99, 12, 0.815) 10px 1px 10px;
+}
 
-} */
+.video {
+    min-height: 90vh;
+    padding-top: 100px;
+}
+
+h4 {
+    margin: 0;
+}

@@ -4,9 +4,9 @@ import "./Footer.css"
 const Footer = () => {
   return (
     <footer>
-      <p>Nikesh and Dilruba .inc</p>
+      <h4 className='footerh4'>Nikesh and Dilruba .inc</h4>
     </footer>
-    );
+    ); 
 };
 
 export default Footer;

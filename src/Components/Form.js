@@ -23,7 +23,7 @@ const Form = ({commentList, setCommentList}) => {
     <div className="form">
       <div className="form-content">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
+        <label className="form-label" htmlFor="name">
           Name
           <input
             type="text"
@@ -38,7 +38,7 @@ const Form = ({commentList, setCommentList}) => {
           />
           <br />
         </label>
-        <label htmlFor="comment">
+        <label className="form-label" htmlFor="comment">
           Comment
           <input
             type="text"
@@ -53,14 +53,14 @@ const Form = ({commentList, setCommentList}) => {
           />
         </label><br/>
 
-        <button>Submit</button>
+        <button className="formsumbit">Submit</button>
       </form>
       <ul className="ul-listyle" style={{listStyle: "none"}}>
           {commentList.map((comment, i) => (
-            <li key={i}>
+            <li className="li-box" key={i}>
               <h4 className="formh4">{comment.name} </h4>
 
-              <p> {comment.comment} </p>
+              <p className="form-p"> {comment.comment} </p>
             </li>
           ))}
         </ul>

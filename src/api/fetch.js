@@ -22,11 +22,12 @@ const fetchVideos = (query, setVideos,setSearchBar,setOpenModal) => {
         
       })
       .catch(error => {
-        
         console.log(error)
         setOpenModal(true)
       });
   }
   
 };
+
+
 export { fetchVideos };

@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Thumbnail.css"
 
-const Thumbnail = ({ videos }) => {
+const Thumbnail = ({ videos, isSuggestion }) => {
   return (
     <div className="thumbnails">
-      {videos.map((video, id) => {
+      {videos && videos.map((video, id) => {
         return (
           <div classname='thumnailvids' key={id}>
              <Link to={`/video?id=${video.id.videoId}`}> 

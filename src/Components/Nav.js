@@ -6,7 +6,7 @@ const Nav = ({ setVideos }) => {
   return (
     <div className="header">
         <nav>
-          <h1>Youtube</h1>
+          <h1>CloneTube</h1>
           <div className="navbtn">
               <Link
                 style={{ textDecoration: "none" }}

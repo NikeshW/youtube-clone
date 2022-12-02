@@ -20,8 +20,8 @@ const Video = () => {
       <div className="videoimg">
       
         <iframe
-          width="616"
-          height="346.5"
+          width="1110"
+          height="616.5"
           src={`https://www.youtube.com/embed/${id}`}
           title="YouTube video player"
           frameBorder="0"

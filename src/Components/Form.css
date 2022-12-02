@@ -1,20 +1,65 @@
 .form-content{
     padding: 20px  ;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    border-radius: 8px;
+    background-color: rgb(233, 147, 43);
+    box-shadow: rgba(0, 0, 0, 0.07) 5px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
 }
 .form{
     width: 100%;
 }
 
-ul li{
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+.ul-listyle{
+    margin: 0;
+    padding: 0;
+    width: 65%;
 justify-content: center;
 align-items: center;
+color: rgb(4, 4, 4);
 }
 
 .formh4{
     font-size: 20px;
     font-style: italic;
+        justify-content: center;
+color: black;
+
+}
+.form-p{
+    justify-content: center;
+    font-size: 17px;
+    color:black
+}
+
+.li-box{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.07) 7px 5px 4px;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(243, 193, 67);
+}
+
+label{
+    font-size: 20px;
+
+}
+
+.formsumbit{
+    border: rgb(29, 3, 3);
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-size: 20px;
+    width: 150px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: rgb(223, 174, 49);
+    box-shadow: rgba(109, 15, 15, 0.35) 10px 25px 15px;
+} 
+form-label{
+    height: 25px;
+    width: 200px;
 }

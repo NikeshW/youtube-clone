@@ -1,7 +1,7 @@
 .thumbnails{
     display: grid;
-    /* width: 100%; */
-    grid-template-columns: 3fr 3fr;}
+    grid-template-columns: 3fr 3fr;
+}
 
 .showimg{
     box-shadow: rgba(255, 134, 69, 0.931) 3px 3px 8px;} 

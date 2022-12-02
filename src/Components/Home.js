@@ -41,7 +41,7 @@ const Home = ({
             <button className="pillbtn"
             key={i}
             onClick={() =>
-              fetchVideos(pill, setVideos, setSearchBar, setOpenModal)
+              fetchVideos(pill, setVideos, setSearchBar, setOpenModal )
             }
           >
             {pill}
@@ -64,11 +64,12 @@ const Home = ({
           setOpenModal={setOpenModal}
         />
       </div>
-          <h3>No search results yet! Please submit a search</h3>
+          <h3 className="home-msg">No search results yet! Please submit a search</h3>
         </div>     
       ) : (
         <Thumbnail videos={videos} />
       )}
+
     </div>
   );
 };
